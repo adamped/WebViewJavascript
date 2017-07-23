@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard1.3</TargetFramework>
+		<AssemblyName>Exrin.Framework</AssemblyName>
+		<PackageId>Exrin.Framework</PackageId>
+		
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="App.xaml" />
+	  <None Remove="MainPage.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="App.xaml" />
+	  <EmbeddedResource Include="MainPage.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Xamarin.Forms" Version="2.3.5.256-pre6" />
+	</ItemGroup>
+
+
+</Project>

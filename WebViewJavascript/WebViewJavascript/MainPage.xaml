@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:WebViewJavascript"
+             x:Class="WebViewJavascript.MainPage">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="50" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+	
+	
+	<StackLayout Orientation="Horizontal">
+		<Button Text="Back" Command="{Binding GoBackCommand}" />
+		<Button Text="Refresh" Command="{Binding RefreshCommand}" />
+		<Button Text="Eval JS" Command="{Binding EvalJS}" />
+	</StackLayout>
+		<local:WebViewer Source="https://google.com" Grid.Row="1"
+						 EvaluateJavascript="{Binding EvaluateJavascript}, Mode=OneWayToSource}"
+						 GoBack="{Binding GoBack, Mode=OneWayToSource}"
+						 Refresh="{Binding Refresh, Mode=OneWayToSource}"/>
+	</Grid>
+</ContentPage>
